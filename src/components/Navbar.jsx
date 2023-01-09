@@ -23,14 +23,14 @@ const Navbar = ({ toggleNav, handleToggleNav }) => {
 
   return (
     <nav
-      className={`${styles.flexCenter} ${styles.boxWidth} ${
+      className={`${styles.flexCenter}  ${
         styles.paddingX
       } md:h-[90px] h-[80px]  ${
         scrollNav ? 'top-0 z-10 sticky bg-black-gradient box-shadow' : ''
       } `}
     >
       <div
-        className={`flex w-full py-6 justify-between items-center md:h-[90px] h-[80px] 
+        className={`flex w-full py-6 justify-between items-center md:h-[90px] h-[80px]${styles.boxWidth} 
         
       `}
       >

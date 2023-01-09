@@ -10,7 +10,7 @@ const Hero = () => {
       id="home"
       className={`grid md:grid-cols-2 grid-cols-1 md:pt-22 md:pb-[90px] pb-3 pt-6`}
     >
-      <div className="sm:px-16 px-6 md:mt-10">
+      <div className="sm:px-16 px-6 md:mt-10 max-w-[1300px]">
         <h1 className="text-white font-poppins font-semibold sm:text-[62px] text-[44px] ss:leading-[80px] text-center ss:text-left leading-[65px]">
           Ready to take your{' '}
           <span className="text-gradient font-bold">business growth</span> to

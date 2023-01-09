@@ -23,12 +23,6 @@ const Operations = () => {
           <div className="absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full pink__gradient" />
         </div>
         <div className="md:ml-10">
-          {/* <p className={`${styles.paragraph}  mt-5`}>
-            We help and organize our projects and operations with great time
-            management and good team collboration to fill our business partners'
-            needs including four steps processes.
-          </p> */}
-
           {operations.map((operation, index) => {
             return (
               <div

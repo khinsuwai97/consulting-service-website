@@ -3,6 +3,7 @@ import { FaTimes } from 'react-icons/fa';
 import { navLinks } from '../data';
 import { Link } from 'react-scroll';
 import { ButtonMobile } from './Button';
+import styles from '../style';
 
 const SideBar = ({ toggleNav, handleToggleNav, closeNav }) => {
   return (
@@ -10,9 +11,10 @@ const SideBar = ({ toggleNav, handleToggleNav, closeNav }) => {
       className={`${toggleNav ? 'opacity-1' : 'opacity-0'}
     ${toggleNav ? 'translate-y-0' : 'translate-y-[-100%] '} ${
         toggleNav ? 'visible' : 'invisible'
-      } transitiona-all ease-in duration-300 fixed flex items-center justify-center backdrop-blur-sm bg-black-gradient w-full h-full z-50 top-0 left-0  `}
+      } transitiona-all ease-in duration-300 fixed flex justify-center items-center
+ backdrop-blur-sm bg-black-gradient w-full h-full z-50 top-0 left-0 `}
     >
-      <div onClick={closeNav}>
+      <div>
         <button onClick={handleToggleNav}>
           <FaTimes className="text-[28px] cursor-pointer text-bgBlue absolute top-[13px] right-[24px] z-50" />
         </button>
