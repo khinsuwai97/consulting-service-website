@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    to right top,
+    #22b8cf,
+    #7dc7e7,
+    #b7d6f4,
+    #e2e9fa,
+    #ffffff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    to right top,
+    #22b8cf,
+    #7dc7e7,
+    #b7d6f4,
+    #e2e9fa,
+    #ffffff
+  );
+}
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.btn-get:hover {
+  background: #7dc7e7;
+}
+
+.sidebar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.btn-learn:hover {
+  background: #22b8cf;
+  color: #fff;
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+.services-card {
+  box-shadow: var(--card-shadow);
+  background: var(--black-gradient);
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+.services-card:hover {
+  transform: translateY(-12px);
+}
+
+.operation-card:hover {
+  box-shadow: var(--card-shadow);
+  background: var(--black-gradient);
+  border-radius: 20px;
+}
+
+.feedback-card:hover {
+  box-shadow: var(--card-shadow);
+  background: var(--black-gradient);
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+.activeLink.active {
+  padding-bottom: 12px;
+  border-bottom: 3px solid #7dc7e7;
+}
+
+.activeLink:hover {
+  padding-bottom: 12px;
+  border-bottom: 3px solid #7dc7e7;
+}
