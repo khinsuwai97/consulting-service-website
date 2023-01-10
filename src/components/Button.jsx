@@ -21,20 +21,16 @@ export default Button;
 
 export const ButtonLearn = (props) => {
   return (
-    <button
-      className={`px-[20px] py-[10px] font-poppins text-[16px] border-solid border-2 border-bgBlue font-medium rounded-[9px] cursor-pointer whitespace-nowrap `}
+    <Link
+      to={props.section}
+      spy={true}
+      smooth={true}
+      offset={-90}
+      duration={500}
+      className="text-gradient px-[20px] py-[10px] font-poppins text-[16px] border-solid border-2 border-bgBlue font-medium rounded-[9px] cursor-pointer whitespace-nowrap"
     >
-      <Link
-        to={props.section}
-        spy={true}
-        smooth={true}
-        offset={-90}
-        duration={500}
-        className="text-gradient"
-      >
-        {props.text} &darr;
-      </Link>
-    </button>
+      {props.text} &darr;
+    </Link>
   );
 };
 
