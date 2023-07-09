@@ -1,7 +1,7 @@
-import React from 'react';
-import quotes from '../assets/quotes.svg';
+import { motion } from 'framer-motion';
 import { feedbacks } from '../data';
 import FeedbackCard from './FeedbackCard';
+import { staggerContainer } from '../utils/motion';
 
 const Testimonials = () => {
   return (
@@ -13,11 +13,17 @@ const Testimonials = () => {
         Hear What our great customers say
       </h2>
 
-      <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container  z-[1]">
-        {feedbacks.map((feedback) => (
-          <FeedbackCard key={feedback.id} {...feedback} />
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="flex flex-wrap sm:justify-start justify-center w-full feedback-container  z-[1]"
+      >
+        {feedbacks.map((feedback, index) => (
+          <FeedbackCard key={feedback.id} {...feedback} index={index} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

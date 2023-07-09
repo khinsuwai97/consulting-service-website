@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { navLinks } from '../data';
 import { Link } from 'react-scroll';
-import Button from './Button';
 import { FaBars } from 'react-icons/fa';
+import Button from './Button';
 import styles from '../style';
 
 const Navbar = ({ toggleNav, handleToggleNav }) => {

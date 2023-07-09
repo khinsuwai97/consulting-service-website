@@ -1,7 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { operations } from '../data';
+import { staggerContainer, fadeIn } from '../utils/motion';
 import Girl from '../assets/Girl.png';
 import styles from '../style';
-import { operations } from '../data';
 
 const Operations = () => {
   return (
@@ -12,8 +14,17 @@ const Operations = () => {
       <h2 className="text-white font-poppins font-semibold sm:text-[44px] text-[36px] leading-[50px] w-full mb-10">
         A simple yet powerful and efficient Operation
       </h2>
-      <div className="flex flex-1 md:flex-row flex-col-reverse md:mr-10 mr-0">
-        <div className="relative flex  justify-center items-center  ">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="flex flex-1 md:flex-row flex-col-reverse md:mr-10 mr-0"
+      >
+        <motion.div
+          variants={fadeIn('right', 'tween', 0.2, 1)}
+          className="relative flex  justify-center items-center  "
+        >
           <img
             src={Girl}
             className="w-[100%] h-[100%] rounded-[20px] z-5 flex-1"
@@ -21,8 +32,11 @@ const Operations = () => {
           />
           <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
           <div className="absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full pink__gradient" />
-        </div>
-        <div className="md:ml-10">
+        </motion.div>
+        <motion.div
+          variants={fadeIn('left', 'tween', 0.2, 1)}
+          className="md:ml-10"
+        >
           {operations.map((operation, index) => {
             return (
               <div
@@ -49,8 +63,8 @@ const Operations = () => {
               </div>
             );
           })}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

@@ -1,12 +1,17 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import styles from '../style';
-import { footerLinks } from '../data';
-import { socialMedia } from '../data';
+import { footerLinks, socialMedia } from '../data';
+import { footerVariants } from '../utils/motion';
 
 const Footer = () => {
   return (
-    <footer className={` md:py-[90px] py-14 `}>
+    <motion.footer
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="show"
+      className={` md:py-[90px] py-14 `}
+    >
       <div className="w-full mb-8 flex md:flex-row flex-col justify-between items-start ">
         <div className="flex md:flex-row flex-col mr-28 md:gap-[100px] gap-[70px] ">
           <div className="flex flex-col justify-start items-start ">
@@ -98,7 +103,7 @@ const Footer = () => {
           })}
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

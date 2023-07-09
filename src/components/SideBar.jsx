@@ -1,9 +1,7 @@
-import React from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { navLinks } from '../data';
 import { Link } from 'react-scroll';
 import { ButtonMobile } from './Button';
-import styles from '../style';
 
 const SideBar = ({ toggleNav, handleToggleNav, closeNav }) => {
   return (

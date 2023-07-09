@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../style';
 
-
 const ServicesCard = (props) => {
   return (
     <div className="services-card flex flex-col justify-center px-8 py-5 cursor-pointer">

@@ -1,9 +1,13 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import quotes from '../assets/quotes.svg';
+import { fadeIn } from '../utils/motion';
 
-const FeedbackCard = ({ content, name, title, img }) => {
+const FeedbackCard = ({ content, name, title, img, index }) => {
   return (
-    <div className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 cursor-pointer feedback-card ">
+    <motion.div
+      variants={fadeIn('up', 'spring', index * 0.5, 1)}
+      className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 cursor-pointer feedback-card "
+    >
       <img
         src={quotes}
         alt="quotes"
@@ -23,7 +27,7 @@ const FeedbackCard = ({ content, name, title, img }) => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
